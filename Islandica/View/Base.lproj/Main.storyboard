@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yvg-Mp-Vcn">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Audio Guides-->
+        <scene sceneID="df2-Ad-h7F">
+            <objects>
+                <tableViewController id="OoG-91-Tcg" customClass="VideosTableViewController" customModule="Islandica" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="250" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TTZ-rJ-JFt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" rowHeight="250" id="8lk-6Z-mXQ" customClass="VideoTableViewCell" customModule="Islandica" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="250"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8lk-6Z-mXQ" id="eb4-L1-lSK">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="v5" translatesAutoresizingMaskIntoConstraints="NO" id="2hU-xb-ddl">
+                                            <rect key="frame" x="16" y="16" width="382" height="226"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn-play" translatesAutoresizingMaskIntoConstraints="NO" id="1dU-kG-NXV">
+                                            <rect key="frame" x="16" y="176" width="64" height="64"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="64" id="aRO-h9-NgQ"/>
+                                                <constraint firstAttribute="height" constant="64" id="afz-wf-tln"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGX-Bi-zfI">
+                                            <rect key="frame" x="88" y="205" width="310" height="37"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="37" id="vOT-CQ-9JN"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vD-LE-XrE">
+                                            <rect key="frame" x="88" y="183" width="310" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="TGX-Bi-zfI" secondAttribute="bottom" constant="8" id="13u-8J-9Uv"/>
+                                        <constraint firstAttribute="bottom" secondItem="2hU-xb-ddl" secondAttribute="bottom" constant="8" id="27z-tK-hfJ"/>
+                                        <constraint firstItem="TGX-Bi-zfI" firstAttribute="leading" secondItem="1dU-kG-NXV" secondAttribute="trailing" constant="8" id="2Gu-GD-Qti"/>
+                                        <constraint firstAttribute="trailing" secondItem="4vD-LE-XrE" secondAttribute="trailing" priority="750" constant="16" id="31T-rm-tek"/>
+                                        <constraint firstAttribute="trailing" secondItem="TGX-Bi-zfI" secondAttribute="trailing" constant="16" id="7yM-DI-MH5"/>
+                                        <constraint firstItem="4vD-LE-XrE" firstAttribute="leading" secondItem="1dU-kG-NXV" secondAttribute="trailing" constant="8" id="9a5-rr-wTk"/>
+                                        <constraint firstItem="2hU-xb-ddl" firstAttribute="leading" secondItem="eb4-L1-lSK" secondAttribute="leading" constant="16" id="CW9-iI-t64"/>
+                                        <constraint firstItem="TGX-Bi-zfI" firstAttribute="top" secondItem="4vD-LE-XrE" secondAttribute="bottom" constant="1" id="DqC-il-Hny"/>
+                                        <constraint firstItem="1dU-kG-NXV" firstAttribute="leading" secondItem="eb4-L1-lSK" secondAttribute="leading" constant="16" id="HJo-s7-s4J"/>
+                                        <constraint firstItem="TGX-Bi-zfI" firstAttribute="top" secondItem="4vD-LE-XrE" secondAttribute="bottom" constant="1" id="VqL-Ee-anX"/>
+                                        <constraint firstAttribute="trailing" secondItem="2hU-xb-ddl" secondAttribute="trailing" constant="16" id="cRJ-HU-fuJ"/>
+                                        <constraint firstItem="4vD-LE-XrE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1dU-kG-NXV" secondAttribute="trailing" constant="8" symbolic="YES" id="lU9-lE-Vkz"/>
+                                        <constraint firstAttribute="bottom" secondItem="1dU-kG-NXV" secondAttribute="bottom" constant="10" id="mNO-Fz-0e7"/>
+                                        <constraint firstItem="2hU-xb-ddl" firstAttribute="top" secondItem="eb4-L1-lSK" secondAttribute="top" constant="16" id="yhA-Xh-gN4"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="TGX-Bi-zfI" id="wsK-Cy-Dy7"/>
+                                    <outlet property="locationNameLabel" destination="4vD-LE-XrE" id="z4m-Nq-OLg"/>
+                                    <outlet property="thumbnailImageView" destination="2hU-xb-ddl" id="ZK1-Ia-O3y"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="OoG-91-Tcg" id="A4W-32-rue"/>
+                            <outlet property="delegate" destination="OoG-91-Tcg" id="VdA-la-3JA"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Audio Guides" id="EYL-ht-FJd">
+                        <barButtonItem key="rightBarButtonItem" title="Restore" id="jMn-HZ-Dwp">
+                            <connections>
+                                <action selector="restoreButtonTapped:" destination="OoG-91-Tcg" id="bKx-fG-2An"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RfD-Jl-Ztg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1367" y="236"/>
+        </scene>
+        <!--Welcome-->
+        <scene sceneID="3SE-6y-MsA">
+            <objects>
+                <viewController id="UeJ-Hh-aDf" customClass="MainViewController" customModule="Islandica" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Fu-PK-WfB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1800"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KkB-ms-cjP">
+                                <rect key="frame" x="0.0" y="140" width="375" height="1660"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MDv-te-9ue" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1665"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whales" translatesAutoresizingMaskIntoConstraints="NO" id="1AO-9C-Wov">
+                                                <rect key="frame" x="16" y="30" width="343" height="260"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="260" id="9DD-tM-VDW"/>
+                                                    <constraint firstAttribute="width" constant="343" id="FCv-dS-KT4"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nco-2F-BmI">
+                                                <rect key="frame" x="16" y="506" width="343" height="43"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="43" id="nN6-kR-6ik"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <state key="normal" title="Entrar a las AudioGuias">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="accessTapped:" destination="UeJ-Hh-aDf" eventType="touchUpInside" id="AgZ-0W-yN9"/>
+                                                </connections>
+                                            </button>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sTY-It-lDR">
+                                                <rect key="frame" x="16" y="313" width="343" height="173"/>
+                                                <color key="backgroundColor" white="1" alpha="0.69921875" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="173" id="1MA-O2-13U"/>
+                                                </constraints>
+                                                <string key="text">Ofrecemos varios tipos de excursiones. Por un lado, excursiones clásicas en autobús con guía de habla hispana (Círculo dorado, Auroras Boreales y, en verano, la Costa Sur y Snaefellsnes). Además, ofrecemos excursiones en autobús con grupos internacionales y audioguía en español, donde contarás con un asistente de habla inglesa y recibirás toda la información a través de la audioguía en español. Estas excursiones pueden...</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="L4S-Qd-YW9">
+                                                <rect key="frame" x="16" y="557" width="343" height="707"/>
+                                                <color key="backgroundColor" white="1" alpha="0.69921875" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Ofrecemos varios tipos de excursiones. Por un lado, excursiones clásicas en autobús con guía de habla hispana (Círculo dorado, Auroras Boreales y, en verano, la Costa Sur y Snaefellsnes). Además, ofrecemos excursiones en autobús con grupos internacionales y audioguía en español, donde contarás con un asistente de habla inglesa y recibirás toda la información a través de la audioguía en español. Estas excursiones pueden realizarse todos los días y las hay para todos los gustos (desde excursiones clásicas como la Costa Sur hasta excursiones más aventureras en el glaciar).
+
+Además, si estás dando la vuelta a la isla por tu cuenta, ofrecemos dos excursiones muy especiales con salida cerca del glaciar Vatnajökull y guía en español. Entre noviembre y marzo, puedes reservar la excursión a la cueva de hielo en el glaciar. Y durante los meses de verano, una excursión en superjeep por el glaciar. 
+
+También ofrecemos excursiones en grupo pequeño durante el verano y excursiones privadas con guía-conductor de habla hispana. Estas se realizan en coche o furgoneta (por ejemplo la excursión a la Laguna Azul, la excursión al Círculo dorado o a la Costa Sur de Islandia). Las excursiones privadas guiadas en español tienen la ventaja de que se pueden adaptar a tu medida y tus intereses. Se pueden realizar excursiones para disfrutar del sol de medianoche, para admirar las auroras boreales o para conocer Islandia durante el invierno, cuando las cascadas están medio congeladas... Los guías de habla hispana compartirán contigo las experiencias sobre su vida en Islandia en tu propio idioma. Si tienes en mente una excursión diferente, no dudes en contactarnos. Cuéntanos tus ideas y nosotros te prepararemos la excursión a medida. Ven a disfrutar de Islandia de una manera más cómoda y personalizada.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whales" translatesAutoresizingMaskIntoConstraints="NO" id="1z9-rt-9iO">
+                                                <rect key="frame" x="16" y="1285" width="343" height="260"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="260" id="g5q-2M-BfJ"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="0.7518996147260274" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="sTY-It-lDR" secondAttribute="trailing" constant="16" id="7Ta-DW-cEj"/>
+                                            <constraint firstAttribute="trailing" secondItem="L4S-Qd-YW9" secondAttribute="trailing" constant="16" id="AJ8-jj-qJP"/>
+                                            <constraint firstItem="1z9-rt-9iO" firstAttribute="leading" secondItem="MDv-te-9ue" secondAttribute="leading" constant="16" id="CCh-uW-cMQ"/>
+                                            <constraint firstItem="1AO-9C-Wov" firstAttribute="leading" secondItem="MDv-te-9ue" secondAttribute="leading" constant="16" id="CPL-tH-goI"/>
+                                            <constraint firstAttribute="height" priority="250" constant="1665" id="HLZ-4H-KwD"/>
+                                            <constraint firstItem="1z9-rt-9iO" firstAttribute="top" secondItem="L4S-Qd-YW9" secondAttribute="bottom" constant="21" id="HaS-IV-4hR"/>
+                                            <constraint firstItem="1AO-9C-Wov" firstAttribute="top" secondItem="MDv-te-9ue" secondAttribute="top" constant="30" id="Kaq-Wl-K5n"/>
+                                            <constraint firstItem="L4S-Qd-YW9" firstAttribute="top" secondItem="nco-2F-BmI" secondAttribute="bottom" constant="8" id="NcE-Mv-wVv"/>
+                                            <constraint firstAttribute="bottom" secondItem="1z9-rt-9iO" secondAttribute="bottom" constant="120" id="Q7e-Kd-9In"/>
+                                            <constraint firstAttribute="trailing" secondItem="1AO-9C-Wov" secondAttribute="trailing" constant="16" id="Td1-E7-f9f"/>
+                                            <constraint firstItem="nco-2F-BmI" firstAttribute="leading" secondItem="MDv-te-9ue" secondAttribute="leading" constant="16" id="Yue-K9-X1C"/>
+                                            <constraint firstAttribute="trailing" secondItem="nco-2F-BmI" secondAttribute="trailing" constant="16" id="Z6H-Z7-fzj"/>
+                                            <constraint firstAttribute="trailing" secondItem="1z9-rt-9iO" secondAttribute="trailing" constant="16" id="a4w-y3-Yx8"/>
+                                            <constraint firstItem="nco-2F-BmI" firstAttribute="top" secondItem="sTY-It-lDR" secondAttribute="bottom" constant="20" id="aGG-0Z-ONs"/>
+                                            <constraint firstItem="sTY-It-lDR" firstAttribute="top" secondItem="1AO-9C-Wov" secondAttribute="bottom" constant="23" id="odE-9P-M79"/>
+                                            <constraint firstItem="sTY-It-lDR" firstAttribute="leading" secondItem="MDv-te-9ue" secondAttribute="leading" constant="16" id="r7V-9P-MpL"/>
+                                            <constraint firstItem="L4S-Qd-YW9" firstAttribute="leading" secondItem="MDv-te-9ue" secondAttribute="leading" constant="16" id="rdK-hO-fH3"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="MDv-te-9ue" secondAttribute="bottom" id="Dkw-xp-IuZ"/>
+                                    <constraint firstItem="MDv-te-9ue" firstAttribute="leading" secondItem="KkB-ms-cjP" secondAttribute="leading" id="ND2-tF-BXn"/>
+                                    <constraint firstAttribute="trailing" secondItem="MDv-te-9ue" secondAttribute="trailing" id="Nb5-j4-GKm"/>
+                                    <constraint firstItem="MDv-te-9ue" firstAttribute="top" secondItem="KkB-ms-cjP" secondAttribute="top" id="ynW-Bt-ixA"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KkB-ms-cjP" firstAttribute="top" secondItem="OO1-Ct-KR2" secondAttribute="top" id="4Hy-gQ-DHx"/>
+                            <constraint firstItem="KkB-ms-cjP" firstAttribute="trailing" secondItem="OO1-Ct-KR2" secondAttribute="trailing" id="bVd-kb-DWE"/>
+                            <constraint firstAttribute="bottom" secondItem="KkB-ms-cjP" secondAttribute="bottom" id="flP-5r-QoM"/>
+                            <constraint firstItem="KkB-ms-cjP" firstAttribute="leading" secondItem="OO1-Ct-KR2" secondAttribute="leading" id="ugb-SA-ioa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OO1-Ct-KR2"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Welcome" id="bXW-ff-16f">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="rus-Ma-Z8d"/>
+                    </navigationItem>
+                    <size key="freeformSize" width="375" height="1800"/>
+                    <connections>
+                        <outlet property="videoGuidesAccess" destination="nco-2F-BmI" id="P1L-3m-pQF"/>
+                        <outlet property="whaleImage" destination="1AO-9C-Wov" id="7u2-er-cdU"/>
+                        <outlet property="whaleImage2" destination="1z9-rt-9iO" id="gJI-fI-Qap"/>
+                        <segue destination="OoG-91-Tcg" kind="show" identifier="goToVideoGuides" id="hYN-Tf-90r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tLN-u5-7Il" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="478.98550724637687" y="235.71428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1Nc-GM-1Ii">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yvg-Mp-Vcn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="59a-YQ-UHR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UeJ-Hh-aDf" kind="relationship" relationship="rootViewController" id="9gX-Pg-74I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQu-PU-LMw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-266.39999999999998" y="237.03148425787109"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn-play" width="373" height="373"/>
+        <image name="v5" width="1914" height="1076"/>
+        <image name="whales" width="1000" height="1000"/>
+    </resources>
+</document>
